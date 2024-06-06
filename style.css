@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+  font-family: 'Nunito','sans-serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+html{
+  font-size: 62.5%;
+}
+section{
+  padding: 2rem 9%;
+}
+.head{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  z-index: 2;
+  background-color: #846c6c;
+}
+.head .logo img{
+  height: 10rem;
+}
+.head .navb #class{
+  display:  none;
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  cursor: pointers;
+  font-size: 3rem;
+  color: #cf7070;
+} 
+.head .navb a{
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: #070404;
+}
+.head .navb a:hover{
+  color:#7d1414 ;
+}
+.head #menu{
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #410b0b;
+}
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #171010;
+}
+.home .content{
+  flex: 1 1 40rem;  
+  padding:6.5rem ;
+}
+.home .content .title{
+ font-size: 6rem; 
+ color: #d4b3cc;
+ text-transform: lowercase;
+}
+.home .content .title Span{
+text-transform: uppercase;
+color:#ef7bbf;
+}
+.home .content .disc{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0 ;
+  color: #d79b9b;
+}
+.home .content .btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: #56a2df;
+  cursor: pointer;
+}
+.home .content .btn:hover{
+  letter-spacing: .2rem;
+}
+.home .image{
+  flex: 1 1 40rem;  
+}
+.home .image img{
+  width: 100%;
+}
+@media (max-width:991px){
+  html{
+    font-size: 55%;}
+    #menu{
+      color: #070404;
+    }
+    .header{
+      padding:2rem ;
+    }
+    section{
+      padding: 2rem;
+    }
+  }
+  @media (max-width:768px){
+   .head #menu {
+    display: inline-block;
+   }
+   #menu{
+    color: #070404;
+  }
+   .head .navb{
+    position: fixed;
+    top:0;
+    right: -105%;
+    width: 30rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter:blur(50px) ;
+    transition: -5s;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    z-index: 1200;
+   }
+   .head .navb.active{
+    right:0;
+   }
+   .head .navb #class{
+    display: block;
+   }
+   .head .navb a{
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+   }
+   .home .content{
+    padding-top: 9.5rem;
+   } 
+   .home .content .image{
+    width: 368px;
+   }
+   .home .content .title{
+    font-size: 4rem;
+   } 
+   .home .content .disc{
+    font-size: 1.6rem;
+   }
+    }
+    @media (max-width:450px){
+      html{
+       font-size: 50%; 
+      }
+      #menu{
+        color: #070404;
+      }
+    }
